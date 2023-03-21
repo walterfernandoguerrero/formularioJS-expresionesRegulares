@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Validacion de formulario con JS</title>
+</head>
+<body>
+   <main>
+    <form action="" method="post" class="formulario" id="formulario">
+        <!--Grupo usuario-->
+        <div class="formulario_grupo  " id="grupo_usuario" >
+            <label for="usuario" class="formulario_label">
+                Usuario:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="text" name="usuario" id="usuario" class="formulario_input" placeholder="Ingrese el usuario">
+                <i class="fas fa-times-circle formulario_validacion_estado "></i>
+                <p class="formulario_input_error">
+                    el usuario tienen que ser de 4 a 16 caracteres y solo puede contener letras, numeros, guiones.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo usuario-->
+
+        <!--Grupo nombre-->
+        <div class="formulario_grupo" id="grupo_nombre" >
+            <label for="nombre" class="formulario_label">
+                Nombre:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="text" name="nombre" id="nombre" class="formulario_input" placeholder="Ingrese el nombre completo">
+                <i class="fas fa-times-circle formulario_validacion_estado"></i>
+                <p class="formulario_input_error">
+                    El nombre solo puede tener letras y espacios y un minimo de 1 hasta un maximo de 40 caracteres.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo nombre-->
+
+        <!--Grupo password-->
+        <div class="formulario_grupo" id="grupo_password" >
+            <label for="password" class="formulario_label">
+                Password:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="password" name="password" id="password" class="formulario_input" placeholder="Ingrese password">
+                <i class="fas fa-times-circle formulario_validacion_estado"></i>
+                <p class="formulario_input_error">
+                    el password tiene que ser de 4 a 12 caracteres.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo password-->
+
+        <!--Grupo password2-->
+        <div class="formulario_grupo" id="grupo_password2" >
+            <label for="password2" class="formulario_label">
+                Repetir password:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="password" name="password2" id="password2" class="formulario_input" placeholder="Repita el password">
+                <i class="fas fa-times-circle formulario_validacion_estado"></i>
+                <p class="formulario_input_error">
+                    ambas contraseñas deben ser iguales.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo password2-->
+
+         <!--Grupo correo-->
+         <div class="formulario_grupo" id="grupo_correo" >
+            <label for="correo" class="formulario_label">
+                Correo electronico:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="email" name="correo" id="correo" class="formulario_input" placeholder="Ingrese el correo electronico">
+                <i class="fas fa-times-circle formulario_validacion_estado"></i>
+                <p class="formulario_input_error">
+                    El correo solo puede tener letras, numeros, puntos, guiones y @.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo correo-->
+
+        <!--Grupo telefono-->
+        <div class="formulario_grupo" id="grupo_telefono" >
+            <label for="nombre" class="formulario_label">
+                Telefono:
+            </label>
+            <div class="formulario_grupo_input">
+                <input type="text" name="telefono" id="telefono" class="formulario_input" placeholder="Ingrese su telefono">
+                <i class="fas fa-times-circle formulario_validacion_estado"></i>
+                <p class="formulario_input_error">
+                    El telefono solo puede tener numeros y un minimo de 7 y un maximo de 14 caracteres.
+                </p>
+            </div> 
+        </div>
+        <!--fin Grupo telefono-->
+
+        <!--Grupo terminos-->
+        <div class="formulario_grupo formulario_grupo_terminos" id="grupo_terminos">
+            <label class="formulario_label">
+                <input type="checkbox" name="terminos" id="terminos" class="formulario_checkbox" >
+                acepto los terminos y condiciones
+            </label>
+        </div>
+
+        <!--fin Grupo terminos-->
+
+        <!-- mensaje error-->
+
+        <div class="formulario_mensaje" id="formulario_mensaje">
+            <p>
+                <i class="fa fa-exclamation-triangle"></i>
+                <b>
+                    Error
+                </b>
+                debe completar el formulario
+            </p>
+            
+        </div>
+        <!--fin mensaje error-->
+
+        <!--boton enviar-->
+        <div class="formulario_grupo_btn_enviar">
+            <button type="submit" class="formulario_btn">
+                Enviar
+            </button>
+            <p class="formulario_mensaje_exito " id="formulario_mensaje_exito">
+                exito al guardar los datos
+            </p>
+        </div>
+         <!--fin boton enviar-->
+    </form>
+   </main>
+    
+    <script src="https://kit.fontawesome.com/423219c0fb.js" crossorigin="anonymous"></script>
+    <script src="js/formulario.js"></script>
+</body>
+</html>
